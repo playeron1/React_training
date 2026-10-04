@@ -1,8 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 
-function welcome_msg(){
-  return <p>Welcome to welcome_function!</p>
+function Welcome_msg(){
+  return(
+    <div>
+      <p>Welcome to welcome_function!</p>
+      <p>Hello</p>
+    </div>
+  )
 }
 
 function App() {
@@ -16,7 +20,7 @@ function App() {
       </ol>
       <h1>Notion App</h1>
       <h6>Notion App</h6>
-      <welcome_msg />
+      <Welcome_msg />
     </div>
   );
 }
