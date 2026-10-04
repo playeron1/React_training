@@ -3,22 +3,24 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>Hello World</p>
+      <ul>
+        <li>Onion</li>
+        <li>Tomato</li>
+        <li>Bhindi</li>
+        <li></li>
+      </ul>
+      <ol>
+        <li>Onion</li>
+        <li>Tomato</li>
+        <li>Bhidn</li>
+      </ol>
+      <h1>Notion App</h1>
+      <h6>Notion App</h6>
+
     </div>
+
   );
 }
 
