@@ -1,27 +1,14 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
-  const [name, setName] = useState('')
-  const [message, setMessage] = useState('')
+  const [message] = useState('Hello world')
 
-  const handleClick = () => {
-    const trimmedName = name.trim()
-    setMessage(trimmedName ? `Hello, ${trimmedName}!` : 'Please enter your name.')
-  }
+  useEffect(() => {
+    console.log('Hello world')
+  }, [])
 
-  return (
-    <div>
-      <input
-        type="text"
-        placeholder="Enter your name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <button onClick={handleClick}>Greet</button>
-      <h2>{message}</h2>
-    </div>
-  )
+  return <h1>{message}</h1>
 }
 
 export default App
