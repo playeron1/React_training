@@ -1,14 +1,12 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-
+import { useEffect, useState } from "react";
 function App() {
-  const [message] = useState('Hello world')
-
+  const [user, setUser] = useState(null);
   useEffect(() => {
-    console.log('Hello world')
-  }, [])
-
-  return <h1>{message}</h1>
+    fetch("https://jsonplaceholder.typicode.com/users/1")
+      .then(res => res.json())
+      .then(data => setUser(data));
+  }, []); // ✅ only runs once
+  if (!user) return <p>Loading...</p>;
+  return <h2>Hello, {user.name}</h2>;
 }
-
-export default App
+export default App 
